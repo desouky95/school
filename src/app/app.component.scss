@@ -1,0 +1,227 @@
+$primary : #2A2B2E; 
+$secondry : #E7D7C1;
+
+html,body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.main_container{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: transparent !important;
+}
+.title{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: $secondry;
+}
+.color-secondary{
+    color : $secondry !important
+}
+
+.color-primary{
+    color : $primary !important
+}
+.bg-primary{
+    background : $primary !important
+}
+.bg-secondary{
+    background: $secondry !important;
+}
+
+.side-nav{
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    background: $secondry;
+    z-index: 1000;
+    display: none;
+    // border-radius: 20%;
+    right: 0;
+    top: 0;
+}
+
+.card-img-container{
+    width: 20%;  border-radius: 50%; overflow: hidden;
+}
+
+.card{
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    height: 100%;
+    border:0;
+    width: 100%;
+    border-bottom: 10px solid black;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.open{
+    display: block;
+    animation: nav-width 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.close{
+    display: none;
+    animation: nav-width-close 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    width: 0%;
+    height: 100%;
+}
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: -webkit-fill-available;
+}
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    width: fit-content;
+}
+
+.menu ul li{
+    font-size: 25px;
+    padding: 10px;
+    border-bottom: 2px solid $secondry;
+}
+
+.menu ul li:hover{
+    border-bottom: 2px solid $primary;
+    font-weight: bolder;
+}
+
+@keyframes nav-width{
+    0%  { width: 0%;}
+    100%  { width: 100%;}
+}
+
+@keyframes nav-width-close{
+    0%  { width: 100%;}
+    100%  { width: 0%;}
+}
+
+.main-slide{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background-image: url('../assets/images/main_slide.jpeg');
+    
+    background-position: center;
+    background-size: cover;
+}
+.backdrop{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: $primary, $alpha: 0.2);
+    z-index: 10;
+}
+.header{
+    width: 100%;
+    background: $primary;
+}
+.slide{
+    min-height: -webkit-fill-available;
+width: 100%;
+position: relative;
+}
+.slide-content{
+position: absolute;
+z-index: 11;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 30px;
+font-weight: bold;
+flex-direction: column;
+}
+.quote{
+max-width: 80%;
+}
+.footer{
+width: 100%;
+display: flex;
+align-items: flex-start;
+justify-content: space-around;
+padding: 20px 0;
+font-size: 12px;
+}
+
+.nav-link{
+    color: $secondry !important;
+}
+
+// 
+// 
+@media (min-width: 320px) and (max-width: 768px) {
+    html,body{ width: 100%;}
+    .slide{
+        min-height: 500px;
+    width: 100%;
+    position: relative;
+}
+.slide-content{
+    font-size: 20px;
+}
+.quote{
+    max-width: 80%;
+}
+.footer{
+    flex-wrap: inherit;
+}
+
+.footer ul {
+    padding: 0%;
+}
+
+.card-img-container{
+    width: 60%
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+ 
+    .slide-content{
+        font-size: 45px;
+    }
+    .slide {
+        min-height: 720px;
+    }
+  }
+  
+    
+  

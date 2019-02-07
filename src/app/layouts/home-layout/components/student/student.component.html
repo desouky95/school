@@ -1,0 +1,22 @@
+<div class="slide">
+    <div class="card">
+      <div class="card-content">
+
+      <div class="image-container">
+        <img *ngIf="student.image != ''" [src]="student.image" class="card-img-top" alt="...">
+        <img *ngIf="student.image == ''" [src]="defaultImage" class="card-img-top" alt="...">
+        <h5 class="card-title">{{student.name}}</h5>
+      </div>
+        <div class="card-body">          
+          <p class="card-text">Faculty : {{student.faculty}}</p>
+          <p class="card-text">Phone : {{student.phone}}</p>
+          <p class="card-text">DOB : {{student.dob | date:shortDate}}</p>
+          <p class="card-text">Address : {{student.address}}</p>
+        </div>
+      </div>
+      <div class="card-footer">
+          <button mat-button [routerLink]="['../../edit-student' , student.id]">Edit</button>
+          <button mat-button (click)="openSnackBar()">Delete</button>
+        </div>
+      </div>
+</div>

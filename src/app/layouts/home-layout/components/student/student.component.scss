@@ -1,0 +1,36 @@
+.card {
+    align-items: flex-start;
+    border: 0;
+}
+
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width : 100%
+}
+
+.slide{
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+}
+
+.image-container{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-body{
+    align-items: baseline;
+}
+
+.card-content{
+    display: flex;
+    align-items: center;
+}
